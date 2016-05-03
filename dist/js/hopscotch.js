@@ -994,7 +994,7 @@
     destroy: function() {
       var el = this.element;
 
-      if (el) {
+      if (el && el.parentNode) {
         el.parentNode.removeChild(el);
       }
       utils.removeEvtListener(el, 'click', this.clickCb);
